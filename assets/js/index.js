@@ -1,5 +1,5 @@
 const player = document.getElementById("toggle-play");
-let song = new Audio("../audio/song.mp3");
+let song = new Audio("assets/audio/song.mp3");
 
 player.addEventListener("change", play);
 song.addEventListener("ended", togglePlayButton);

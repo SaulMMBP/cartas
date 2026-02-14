@@ -1,0 +1,138 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+.main-index {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arbolito {
+    width: 150px;
+    height: auto;
+    transition: all 100ms ease-in-out;
+    animation: arbolito 4s ease-in-out infinite;
+
+}
+
+.arbolito:hover {
+    scale: 0.9;
+    cursor: pointer;
+}
+
+.main-carta-00001 {
+    padding: 150px 10vw;
+}
+
+.main-carta-00001 h2 {
+    text-align: center;
+}
+
+.music-card {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.music {
+    padding: 1rem;
+    width: 300px;
+    border-radius:12px;
+    height: 75px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px 3px rgb(190, 190, 190);
+    display: flex;
+    gap: 2rem;
+}
+
+.music img {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+    animation: album 5s linear infinite;
+    box-shadow: 0 0 3px 1px rgb(0, 0, 0);
+}
+
+.music-title {
+    font-weight: bold;
+}
+
+.music-artist {
+    font-size: 0.8rem;
+}
+
+.pause {
+    display: none;
+}
+
+.player {
+    font-size: 2rem;
+}
+
+.player:hover {
+    cursor: pointer;
+}
+
+#toggle-play:checked + .player .play {
+    display: none;
+}
+
+#toggle-play:checked + .player .pause {
+    display: inline;
+}
+
+.me-gustas-img {
+    width: 80%;
+    height: auto;
+    margin: 50px;
+    rotate: -5deg;
+    box-shadow: -10px 10px 20px 1px rgb(97, 97, 97);
+}
+
+
+@keyframes arbolito {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 10px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes album {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .main-carta-00001 {
+        width: 70vw;
+    }
+}
